@@ -1,0 +1,15 @@
+footer {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    position: absolute;
+    bottom: 1rem;
+    background-color: rgba(0,0,0, .9);
+    color: #efefef;
+}
+
+footer p {
+    
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 100;
+}

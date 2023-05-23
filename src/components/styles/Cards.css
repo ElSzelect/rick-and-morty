@@ -1,0 +1,23 @@
+
+main {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    max-width: 100vw;
+    min-height: 100vh;
+    background-image: url(https://images3.alphacoders.com/812/812062.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.cardsContainer {
+    display: flex;
+    margin-top: 9vh;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly; 
+    
+}
+

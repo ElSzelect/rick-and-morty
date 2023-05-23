@@ -1,0 +1,43 @@
+
+  
+  .searchBarContainer  {
+    display: flex;
+    align-self: center;
+    align-content: row;
+    border: 2px solid #555;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-right: 10%;
+    width: fit-content;
+  }
+
+  .searchBarContainer form {
+    display: flex;
+    flex-direction: row;
+    
+  }
+
+  .searchBarContainer form input {
+    min-width: 300px;
+  }
+  
+  .searchBarContainer button {
+    min-width: 19%;
+    border: 1px black solid;
+    border-radius: 5px;
+    margin-left: 2%;
+    background-color: #555;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .searchBarContainer button:hover {
+    background-color: #333;
+  }

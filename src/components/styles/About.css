@@ -1,0 +1,19 @@
+.aboutSection {
+    margin: 10vh 1rem 3rem 1rem;
+    background-color: rgba(0,0,0,.3);
+    width: 100%;
+    padding: 1rem;
+    text-shadow: .1rem .1rem .1rem #efefef;
+}
+
+.aboutSection h1 {
+    font-size: 7vw;
+}
+.aboutSection h2 {
+    font-size: 5vw;
+    font-style: oblique;
+}
+
+.aboutSection p {
+    font-size: 4vw;
+}

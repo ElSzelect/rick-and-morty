@@ -1,0 +1,55 @@
+
+
+.navBarContainer {
+    display: flex;
+    width: 100%;
+    height: 9%;
+    background-color: rgba(0, 0, 0, 0.838);
+    box-shadow: .1rem .1rem .5rem;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    justify-content: space-around;
+}
+
+.linksContainer {
+    display: flex;
+    width: 25%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.linksContainer h3:hover {
+    transition-duration: .2s;
+    display: flexbox;
+    color: rgba(255, 0, 225, 0.838);
+    text-shadow: .1rem .1rem .5rem;
+}
+
+
+SearchBar {
+    display: inline-block;
+}
+
+.logOutContainer {
+    display: flex;
+    color: aliceblue;
+    align-items: center;
+}
+
+.logOutContainer button {
+    margin-left: 2%;
+    background-color: red;
+    border: 1px solid black;
+}
+
+.logOutContainer button:hover {
+    transition-duration: .2s;
+    box-shadow: .1rem .1rem .5rem red;
+}
+
+.logOutContainer button:active{
+    color: white;
+}
