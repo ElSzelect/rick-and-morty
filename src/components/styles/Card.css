@@ -19,6 +19,39 @@
 
 }
 
+.favButton {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: black;
+    border-radius: 9rem 0rem 7rem 4rem;
+    width: fit-content;
+    padding: .5rem .7rem;
+    font-size: 20px;
+    font-weight: 600;
+    border: 0ch;
+    color: beige;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.botonX {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border-radius: 2rem 0rem 3rem 10rem;
+    height: fit-content;
+    width: fit-content;
+    padding: .5rem .7rem ;
+    font-size: 20px;
+    font-weight: 600;    
+    border: 0ch;
+    background-color: rgb(167, 25, 25);
+    color: beige;
+    transition: .3s;
+    cursor: pointer;
+}
+
 .content-card img {
     border: 2px solid black;
     border-right: 0px;
@@ -36,29 +69,19 @@
     padding: 1rem  0rem;
 }
 
-.content-card button {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-}
 
-.header button{
-    height: fit-content;
-    width: fit-content;
-    padding: .5rem .7rem ;
+
+.header .botonX:hover{
+    background-color: rgb(255, 0, 0);
     
-    font-size: 20px;
-    font-weight: 600;
-
-    border-radius: 2rem 0rem 3rem 10rem;
-    border: 0ch;
-
-    background-color: rgb(167, 25, 25);
-    color: beige;
-    transition: .3s;
 }
 
-.header button:hover{
+.header .favButton:hover{
+    background-color: rgb(37, 0, 0);
+    
+}
+
+.header .favButton:active{
     background-color: rgb(255, 0, 0);
     
 }

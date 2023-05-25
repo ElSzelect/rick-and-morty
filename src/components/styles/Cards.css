@@ -12,9 +12,31 @@ main {
     background-attachment: fixed;
 }
 
+#NoCharacters {
+    margin-top: 100%;
+}
+
+.favSwitchButton {
+    padding: .5%;
+    position: absolute;
+    top: 0;
+    margin-top: 9vh;
+    font-size: larger;
+    font-weight: 700;
+    color: #efefef;
+    box-shadow: .1rem .1rem .5rem black;
+    border-radius: 1rem;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.favSwitchButton:hover {
+    background-color: rgba(0, 0, 0, .5);
+}
+
 .cardsContainer {
     display: flex;
-    margin-top: 9vh;
+    margin-top: 12.8vh;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly; 

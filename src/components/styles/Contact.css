@@ -8,6 +8,19 @@
 }
 
 .contactSection ul li {
-    margin: 1rem 0 1rem 0
+    margin: 1rem 0 1rem 0;
 }
+
+.contactSection ul li a {
+    color: #efefef;
+    
+}
+.contactSection ul li a:hover {
+    color: #d2d2d2;
+
+    
+}
+
+
+
 

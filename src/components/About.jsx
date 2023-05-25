@@ -6,28 +6,32 @@ function About() {
   const delay = 150; // Retardo entre cada letra (en milisegundos)
 
   useEffect(() => {
-    const targetText = "Hii, I'm Ivan."; // Texto completo a mostrar
+    const targetText = "FuullStack Web Developer"; // Texto completo a mostrar
+
     let index = 0;
+    let timer;
 
-    const timer = setInterval(() => {
+    const typeNextLetter = () => {
+      setText((prevText) => prevText + targetText.charAt(index));
+      index++;
+
       if (index < targetText.length) {
-        setText((prevText) => prevText + targetText.charAt(index));
-        index++;
-      } else {
-        clearInterval(timer);
+        timer = setTimeout(typeNextLetter, delay);
       }
-    }, delay);
+    };
 
-    return () => clearInterval(timer); // Limpiar el temporizador cuando el componente se desmonte
+    timer = setTimeout(typeNextLetter, delay);
+
+    return () => clearTimeout(timer); // Limpiar el temporizador cuando el componente se desmonte
 
   }, []); // El segundo parámetro vacío [] asegura que el efecto solo se ejecute una vez al montar el componente
 
   return (
     <main>
       <section className="aboutSection">
-        <h1>{text}</h1>
-        <h2>FullStack Web Developer</h2>
-        <p>I'm glad to show you how I improve my styling skills with CSS, Flexbox, and Architecture</p>
+        <h1>Hi, I'm Ivan Szelect</h1>
+        <h2>{text}</h2>
+        <p>I'm glad to show you how I improve my styling skills at CSS, Flexbox, and React.</p>
       </section>
     </main>
   );

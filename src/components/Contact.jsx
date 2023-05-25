@@ -9,10 +9,10 @@ export default function Contact () {
       <section className="contactSection">
         
           <ul>
-            <li><AiFillLinkedin/>Linkedin: <a href="https://www.linkedin.com/in/szelect" target="_blank">Ivan Szelect</a></li>
-            <li><AiFillInstagram/>Instagram: <a>@ivan_szelect</a></li>
-            <li><AiFillGithub/>GitHub: </li>
-            <li>Email: <a>ivanszelect@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/szelect" target="_blank"><AiFillLinkedin/>Linkedin: Ivan Szelect</a></li>
+            <li><a href="https://www.instagram.com/ivan_szelect/" target="_blank"><AiFillInstagram/>Instagram: @ivan_szelect</a></li>
+            <li><a href="https://github.com/ElSzelect" target="_blank"><AiFillGithub/>GitHub: ElSzelect </a> </li>
+            <li><a href="mailto:ivanszelect@gmail.com" target="_blank"><AiFillMail/>Email: ivanszelect@gmail.com</a></li>
           </ul>
       </section>
     </main>

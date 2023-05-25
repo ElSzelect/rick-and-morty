@@ -2,6 +2,8 @@ import React from 'react'
 import { useState } from 'react'
 import {validation} from './validation'
 import './styles/Form.css'
+import portal from '../imgs/portalSinFondo.png'
+import portalGif from '../imgs/portalGif.gif'
 
 export default function Form(props) {
     const [userData, setUserData] =useState({
@@ -34,6 +36,7 @@ export default function Form(props) {
     return (
         <main id='main' className=''>
             <div className='formContainer'>
+                <img className='portal' alt='portal' src={portal}></img>
                 <form className='loginForm' onSubmit={handleSubmit}>
                     <label  htmlFor="">Email</label>
                     <input  onChange={handleInputChange} type="email" name='username' placeholder='Email' value={userData.username}/>

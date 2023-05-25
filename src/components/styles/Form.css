@@ -24,7 +24,24 @@
     height: 80%;
     width: 80%;
     align-self: center;
+    
 }
+
+.portal{
+    position: absolute;
+    width: 38%;
+    opacity: .8;
+    bottom: 21%;
+}
+
+@media screen and (max-width: 767px) {
+    .portal {
+        width: 91%;
+        bottom: 27%;
+        opacity: 0.8;
+    }
+}
+
 
 .loginForm {
 
@@ -33,9 +50,21 @@
     box-shadow: .1rem .1rem .7rem;
     text-align: -webkit-center;
     padding: 2rem;
+    transform: translateX(0) translateY(0);
+    animation: flotante 4s ease-in-out infinite alternate;
+    z-index: 1;
    }
 
-   .loginForm input, .loginForm label {
+@keyframes flotante {
+    from {
+      transform: translateX(0) translateY(0);
+    }
+    to {
+      transform: translateX(0) translateY(-10px);
+    }
+  }
+   
+.loginForm input, .loginForm label {
     margin: 10%;
 }
 
@@ -60,6 +89,7 @@
     box-shadow: .1rem .1rem .3rem;
     transition-duration: 1s;
     position: absolute;
+    cursor: pointer;
 }
 
 .loginForm button:hover {

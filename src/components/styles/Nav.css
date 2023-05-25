@@ -10,7 +10,7 @@
     flex-wrap: nowrap;
     align-items: center;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     justify-content: space-around;
 }
 
@@ -43,6 +43,7 @@ SearchBar {
     margin-left: 2%;
     background-color: red;
     border: 1px solid black;
+    cursor: pointer;
 }
 
 .logOutContainer button:hover {

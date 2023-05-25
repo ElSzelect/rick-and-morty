@@ -12,16 +12,17 @@ import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 
 function App() {
   const [characters, setCharacters] = useState([]);
-  const [contador, setContador] = useState(0);
+  const [favCharacters, setFavCharacters] = useState([]);
+  const [favPage, setFavPage] = useState(false);
   const location = useLocation();
   const [access, setAccess] = useState(false);
+  const [userData, setUserData] = useState({});
 
   const navigate = useNavigate();
-  const username = "ivanszelect@gmail.com";
-  const password = "1Password";
 
   function login(userData) {
-    if (userData.password === password && userData.username === username) {
+    if (userData.password && userData.username) {
+      setUserData(userData);
       setAccess(true);
       navigate("/home");
     }
@@ -33,19 +34,13 @@ function App() {
     !access && navigate("/");
   }, [access]);
 
-  const onSearch = (character) => {
-    fetch(`https://rickandmortyapi.com/api/character/${character}`)
+  const onSearch = (characterId) => {
+    fetch(`https://rickandmortyapi.com/api/character/${characterId}`)
       .then((response) => response.json())
       .then((data) => {
-        characters.map((carta) => {
-          if (carta.name === data.name) {
-            alert("Esa Carta ya existe");
-            return setContador(1);
-          }
-        });
-
-        if (contador > 0) {
-          return (contador = 0);
+        const repeated = characters.find((card) => card.name === data.name);
+        if (repeated) {
+          return alert("Esa Carta ya existe");
         } else {
           if (data.name) {
             return setCharacters((oldChards) => [...oldChards, data]);
@@ -56,26 +51,29 @@ function App() {
       });
   };
 
-  // function onClose(characterKey) {
-  //   for (let i = 0; i < characters.length; i++) {
-  //     if (characters[i].key == characterKey) {
-  //       characters.splice(i);
-  //     }
-  //   }
-  // }
-
   function onClose(id) {
     setCharacters((characters) => characters.filter((char) => char.id !== id));
   }
 
-  // const location = useLocation();
+  function favCharacterHandler(charData) {
+    if (favCharacters.find((char) => char.id === charData.id)) {
+      return setFavCharacters((favCharacters) =>
+        favCharacters.filter((char) => char.id !== charData.id)
+      );
+    }
+    setFavCharacters((oldChards) => [...oldChards, charData]);
+  }
+
+  function switchToFavs() {
+    setFavPage((status) => !status);
+  }
 
   return (
     <div>
       {location.pathname === "/" ? null : (
         <Nav
           onSearch={onSearch}
-          username={username}
+          username={userData.username}
           logOut={logOut}
           access={access}
         />
@@ -85,7 +83,16 @@ function App() {
         <Route path="/" element={<Form login={login} />} />
         <Route
           path="/home"
-          element={<Cards onClose={onClose} characters={characters} />}
+          element={
+            <Cards
+              onClose={onClose}
+              characters={characters}
+              favCharacters={favCharacters}
+              favCharacterHandler={favCharacterHandler}
+              switchToFavs={switchToFavs}
+              favPage={favPage}
+            />
+          }
         />
         <Route path="/about" element={<About />} />
         <Route path="/detail/:detailId/" element={<Detail />} />
