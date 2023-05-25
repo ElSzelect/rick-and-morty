@@ -40,8 +40,6 @@ function App() {
         characters.map((carta) => {
           if (carta.name === data.name) {
             alert("Esa Carta ya existe");
-            // alert("Enserio maldita basura puta");
-            // alert("no insistas.");
             return setContador(1);
           }
         });
@@ -81,8 +79,8 @@ function App() {
           logOut={logOut}
           access={access}
         />
-        )}
-        <Footer/>
+      )}
+      <Footer />
       <Routes>
         <Route path="/" element={<Form login={login} />} />
         <Route
@@ -99,4 +97,3 @@ function App() {
 }
 
 export default App;
-
